@@ -1,0 +1,23 @@
+.loader-background {
+	background: linear-gradient(45deg, #ffffff99, #00000099, #ffffff99, #00000099, #ffffff99, #00000099, #ffffff99, #00000099);
+	background-size: 800% 800%;
+	animation: gradient 10s ease-in-out infinite;
+	height: 100vh; 
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 5% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 5% 50%;
+	}
+}
+
+.loader-icon{
+	background-image: url('../Loader/loader.gif');
+	background-repeat: no-repeat;
+}

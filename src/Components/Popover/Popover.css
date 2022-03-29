@@ -1,0 +1,96 @@
+:root {
+    --popover-text-color: #000;
+    --popover-background-color: #fff;
+    --popover-margin: 5px;
+    --popover-arrow-size: 6px;
+  }
+  
+  .popover-wrapper {
+    display: inline-block;
+    position: relative; 
+  }
+
+  .popover-tip {
+    position: absolute;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    color: var(--popover-text-color);
+    background: var(--popover-background-color); 
+    line-height: 1;
+    z-index: 100;  
+    width: 300px; 
+    box-shadow: 0px 1px 6px 2px #00000091;
+  }
+  
+  .popover-tip::before {
+    content: " ";
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-width: var(--popover-arrow-size);
+    margin-left: calc(var(--popover-arrow-size) * -1);
+  }
+  
+  .popover-tip.top {
+    top: calc(var(--popover-margin) * -1);
+  }
+
+  .popover-tip.top::before {
+    top: 100%;
+    border-top-color: var(--popover-background-color);
+  }
+  
+  .popover-tip.right {
+    left: calc(100% + var(--popover-margin));
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+  }
+
+  .popover-tip.right::before {
+    left: calc(var(--popover-arrow-size) * -1);
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    border-right-color: var(--popover-background-color);
+  }
+  
+  .popover-tip.bottom {
+    bottom: calc(var(--popover-margin) * -1);
+  }
+
+  .popover-tip.bottom::before {
+    bottom: 100%;
+    border-bottom-color: var(--popover-background-color);
+  }
+  
+  .popover-tip.left {
+    left: auto;
+    right: calc(100% + var(--popover-margin));
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+  }
+
+  .popover-tip.left::before {
+    left: auto;
+    right: calc(var(--popover-arrow-size) * -2);
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    border-left-color: var(--popover-background-color);
+  }
+
+  .popover-header{
+    line-break: loose;
+  }
+
+  .popover-content{ 
+    max-height: 300px;
+    overflow-y: auto;
+  } 
+
+  .popover-footer{
+    font-size: 10pt; 
+  }
