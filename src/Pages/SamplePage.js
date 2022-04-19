@@ -11,7 +11,7 @@ function SamplePage() {
     const getData = (pageNumber = 0, pageSize = 10) => {
         let _list = [];
         setOpenLoader(true);
-        fetch("http://dummyjson.com/users?skip=" + (pageNumber * pageSize) + "&limit=" + pageSize)
+        fetch("https://dummyjson.com/users?skip=" + (pageNumber * pageSize) + "&limit=" + pageSize)
             .then((results) => {
                 return results.json();
             })
